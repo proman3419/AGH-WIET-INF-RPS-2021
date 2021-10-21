@@ -1,10 +1,10 @@
 # a
-# load data set from a library
+# wczytaj zbiór danych z biblioteki
 library(boot)
 data(beaver)
 beaver
 
-# problem specific implementation
+# rozwiązanie pod konkretny problem
 calculate_dot_product <- function(data, v1_i, v2_i) {
   dot_product <- 0
   

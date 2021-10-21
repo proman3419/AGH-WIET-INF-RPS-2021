@@ -1,19 +1,19 @@
 # a
-# show all available data sets
+# pokaż dostępne zbiory danych
 data(package=.packages(all.available=TRUE))
 
-# load data from a file
-# not `research <- load('1/research.RData')`!
+# wczytaj dane z pliku
+# nie `research <- load('1/research.RData')`!
 load('1/research.RData')
 new_research <- research
 new_research
 
 
 # b
-# load data set from a library
+# wczytaj zbiór danych z biblioteki
 library(boot)
 data(beaver)
 beaver
 
-# save data to a file
+# zapisz dane do pliku
 save(beaver, file='1/beaver.RData')
