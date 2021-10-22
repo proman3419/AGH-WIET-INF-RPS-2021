@@ -5,11 +5,12 @@ data(beaver)
 beaver
 
 # rozwiązanie pod konkretny problem
+# iloczyn skalarny
 calculate_dot_product <- function(data, v1_i, v2_i) {
   dot_product <- 0
   
   for (i in 1:dim(data)[1]) {
-    dot_product <- dot_product + data[i, v1_i] * data[i, v2_i]
+    dot_product <- dot_product + data[i,v1_i] * data[i,v2_i]
   }
   
   dot_product
@@ -39,10 +40,8 @@ find_first_last_true <- function(v) {
     if (v[i]) {
       if (is.na(res[1])) {
         res[1] <- i
-        res[2] <- i
-      } else {
-        res[2] <- i
       }
+      res[2] <- i
     }
   }
   
@@ -50,10 +49,12 @@ find_first_last_true <- function(v) {
 }
 
 v <- sample(c(TRUE, FALSE), 10, replace=TRUE)
+v
 find_first_last_true(v)
 
 
 # d
+# moda
 mode <- function(v) {
   cnt <- 1
   max_cnt <- 1

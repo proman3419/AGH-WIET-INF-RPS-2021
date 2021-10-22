@@ -23,9 +23,9 @@ generate_sym_diag_dom_matrix <- function(dim) {
   for (i in 1:dim) {
     for (j in 1:dim) {
       if (i == j)
-        A[i, j] = dim^2 + i + j
+        A[i,j] = dim^2 + i + j
       else
-        A[i, j] = (i + j) %% dim
+        A[i,j] = (i + j) %% dim
     }
   }
   
