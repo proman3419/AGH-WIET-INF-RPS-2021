@@ -1,7 +1,9 @@
 # a
-list1 <- list(strings_v=c("asdf", "abc", "xyz"), 
-              nums_m=matrix(data=1:9, nrow=3, ncol=3, byrow=TRUE),
-              logic_m=matrix(data=TRUE, nrow=2, ncol=4, byrow=FALSE))
+list1 <- list(
+  strings_v = c("asdf", "abc", "xyz"), 
+  nums_m = matrix(data=1:9, nrow=3, ncol=3, byrow=TRUE),
+  logic_m = matrix(data=TRUE, nrow=2, ncol=4, byrow=FALSE)
+)
 list1
 typeof(list1)
 
@@ -16,20 +18,20 @@ sqrt(list1$nums_m)
 # b
 n <- 10
 # stwórz ramkę z wektorami o losowych wartościach
-research <- data.frame(
-  smoking = sample(c(TRUE, FALSE), n, replace=TRUE),
-  sexes = sample(c('M', 'F'), n, replace=TRUE),
-  ages = sample(seq(1:100), n, replace=TRUE)
+badanie <- data.frame(
+  czy_pali = sample(c(TRUE, FALSE), n, replace=TRUE),
+  plec = sample(c('M', 'F'), n, replace=TRUE),
+  wiek = sample(seq(1:100), n, replace=TRUE)
 )
-research
+badanie
 
 # sprawdź typ danych dla każdej kolumny
-sapply(research, FUN=class)
+sapply(badanie, FUN=class)
 
 # zlicz wystąpienia wartości w kolumnie
-table(research$sexes)
+table(badanie$plec)
 
-research
+badanie
 
 # zapisz dane do pliku
-save(research, file='1/research.RData')
+save(badanie, file='1/badanie.RData')

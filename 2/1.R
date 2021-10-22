@@ -4,21 +4,21 @@ generate_freq_distribution <- function(data) {
   mini <- min(data)
   maxi <- max(data)
   R <- maxi - mini 
-  R
+  print(R)
   
   # ustalamy liczbę klas
   k <- ceiling(1 + 3.222*log(length(data)))
-  k
+  print(k)
   
   # wyznaczamy długość klasy
-  b <- round(R/k, 2)
-  b
+  b <- R/k
+  print(b)
   
   freq_tab <- data.frame(nr.klasy = seq(1, k),
                          poczatek.klasy = 
-                           floor(100*seq(from=mini, by=b, length.out=k))/100,
+                           ceiling(100*seq(from=mini, by=b, length.out=k))/100,
                          koniec.klasy = 
-                           ceiling(100*seq(to=maxi, by=b, length.out=k))/100)
+                           floor(100*seq(to=maxi, by=b, length.out=k))/100)
   
   freq_tab$srodek.klasy <- freq_tab$poczatek.klasy + 
     (freq_tab$koniec.klasy-freq_tab$poczatek.klasy)/2

@@ -76,7 +76,7 @@ dim(G)
 
 # e
 A <- matrix(data=1:9, nrow=3, ncol=3, byrow=TRUE, 
-            dimnames=list(c("r1", "r2", "r3"), c("c1", "c2", "c3")))
+            dimnames = list(c("r1", "r2", "r3"), c("c1", "c2", "c3")))
 A
 
 

@@ -3,10 +3,10 @@
 data(package=.packages(all.available=TRUE))
 
 # wczytaj dane z pliku
-# nie `research <- load('1/research.RData')`!
-load('1/research.RData')
-new_research <- research
-new_research
+# nie `badanie <- load('1/badanie.RData')`!
+load('1/badanie.RData')
+nowe_badanie <- badanie
+nowe_badanie
 
 
 # b
