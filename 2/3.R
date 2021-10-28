@@ -2,7 +2,7 @@
 # prop w formacie (x[%], y[%], z[%], ...)
 # przez stosowanie zaookrągleń w niektórych przypadkach zostają
 # elementy nadmiarowe, które dołączane są do ostatniego podwektora
-splitIntoVectors <- function(v, prop) {
+split_into_vectors <- function(v, prop) {
   # musi być 100% w sumie
   stopifnot(sum(prop) == 100)
   
@@ -44,4 +44,4 @@ splitIntoVectors <- function(v, prop) {
 n <- 10
 v <- 1:n
 prop <- c(10, 20, 30, 20, 10, 10)
-splitIntoVectors(v, prop)
+split_into_vectors(v, prop)

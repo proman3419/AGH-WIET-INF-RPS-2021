@@ -35,7 +35,13 @@ generate_freq_distribution <- function(data) {
   freq_tab
 }
 
+generate_freq_distribution_short <- function(data) {
+  k <- ceiling(1 + 3.222*log(length(data)))
+  table(cut(data, k))  
+}
+
 library(boot)
 data(acme)
 acme$market
 generate_freq_distribution(acme$market)
+generate_freq_distribution_short(acme$market)
